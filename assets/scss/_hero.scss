@@ -1,0 +1,107 @@
+/*--------------------------------------------------------------
+  ## hero-area
+--------------------------------------------------------------*/
+
+.hero-area {
+  // padding-top: 180px;
+  // padding-bottom: 100px;
+  background-image: url("../img/hero/map-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-color: $bg-white;
+
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: 991px) {
+    background-position: 85% 10%;
+  }
+  .map {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-width: 340px;
+    display: none;
+  }
+}
+
+.hero-txt {
+  h6 {
+    font-family: $font-family-syne;
+    font-weight: 700;
+    color: $title-color;
+    font-size: 34px;
+    margin-bottom: 16px;
+    @media only screen and (max-width: 991px) {
+      font-size: 30px;
+    }
+    @media only screen and (max-width: 767px) {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+  }
+  h1 {
+    display: flex;
+    align-items: end;
+    font-family: $font-family-nasalization;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 0.7;
+    @media only screen and (max-width: 991px) {
+      font-size: 60px;
+    }
+    @media only screen and (max-width: 767px) {
+      font-size: 40px;
+    }
+    @media only screen and (max-width: 482px) {
+      font-size: 33px;
+    }
+    span {
+      letter-spacing: 3px;
+      @media only screen and (max-width: 767px) {
+        letter-spacing: 1px;
+      }
+    }
+    img {
+      width: 100%;
+      max-width: 280px;
+      @media only screen and (max-width: 991px) {
+        max-width: 200px;
+      }
+      @media only screen and (max-width: 767px) {
+        max-width: 120px;
+      }
+      @media only screen and (max-width: 482px) {
+        max-width: 90px;
+      }
+    }
+  }
+  p {
+    font-family: $font-family-syne;
+    font-weight: 500;
+    color: $title-color;
+    font-size: 33px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    @media only screen and (max-width: 991px) {
+      font-size: 28px;
+    }
+    @media only screen and (max-width: 767px) {
+      font-size: 23px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.hero-btns {
+  display: flex;
+  margin-left: -8px;
+  margin-right: -8px;
+  a {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
