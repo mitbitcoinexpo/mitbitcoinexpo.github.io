@@ -599,22 +599,43 @@ h6 a {
   ## hero-area
 --------------------------------------------------------------*/
 .hero-area {
-  background-image: url("../img/hero/map-bg.png");
-  background-size: cover;
-  background-position: center;
+  background-image: url("../img/hero/woman.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-position: 108% 0%;
   background-color: #ffffff;
   position: relative;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
+@media only screen and (max-width: 1399px) {
+  .hero-area {
+    background-position: 130% 60%;
+    background-size: 65%;
+  }
+}
 @media only screen and (max-width: 991px) {
   .hero-area {
-    background-position: 85% 10%;
+    background-position: 130% 50%;
+    background-size: 65%;
+    background-image: none;
+    background-position: unset;
+    background-size: unset;
+    background: none;
+    padding-top: 80px;
   }
 }
 .hero-area .map {
@@ -626,24 +647,6 @@ h6 a {
   display: none;
 }
 
-.hero-txt h6 {
-  font-family: "Syne", sans-serif;
-  font-weight: 700;
-  color: #000000;
-  font-size: 34px;
-  margin-bottom: 16px;
-}
-@media only screen and (max-width: 991px) {
-  .hero-txt h6 {
-    font-size: 30px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .hero-txt h6 {
-    font-size: 25px;
-    margin-bottom: 12px;
-  }
-}
 .hero-txt h1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -653,49 +656,76 @@ h6 a {
           align-items: end;
   font-family: "Nasalization";
   font-weight: normal;
-  font-size: 80px;
+  font-size: 56px;
   line-height: 0.7;
 }
 @media only screen and (max-width: 991px) {
   .hero-txt h1 {
-    font-size: 60px;
+    font-size: 43px;
   }
 }
 @media only screen and (max-width: 767px) {
   .hero-txt h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 @media only screen and (max-width: 482px) {
   .hero-txt h1 {
-    font-size: 33px;
+    font-size: 26px;
   }
 }
 .hero-txt h1 span {
-  letter-spacing: 3px;
+  letter-spacing: 1.5px;
+  padding-top: 30px;
 }
 @media only screen and (max-width: 767px) {
   .hero-txt h1 span {
     letter-spacing: 1px;
+    padding-top: 22px;
   }
 }
 .hero-txt h1 img {
   width: 100%;
-  max-width: 280px;
+  max-width: 220px;
 }
 @media only screen and (max-width: 991px) {
   .hero-txt h1 img {
-    max-width: 200px;
+    max-width: 180px;
   }
 }
 @media only screen and (max-width: 767px) {
   .hero-txt h1 img {
-    max-width: 120px;
+    max-width: 100px;
   }
 }
 @media only screen and (max-width: 482px) {
   .hero-txt h1 img {
-    max-width: 90px;
+    max-width: 80px;
+  }
+}
+.hero-txt .title-img img {
+  width: 100%;
+  max-width: 750px;
+  margin-top: 50px;
+}
+@media only screen and (max-width: 1399px) {
+  .hero-txt .title-img img {
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .hero-txt .title-img img {
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .hero-txt .title-img img {
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .hero-txt .title-img img {
+    max-width: 350px;
   }
 }
 .hero-txt p {
@@ -703,7 +733,7 @@ h6 a {
   font-weight: 500;
   color: #000000;
   font-size: 33px;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 25px;
 }
 @media only screen and (max-width: 991px) {
