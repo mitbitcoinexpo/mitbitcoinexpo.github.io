@@ -26,59 +26,72 @@
     });
   });
 
-  	//===== mobile-menu-btn
-	let navbarToggler = document.querySelector(".navbar-toggler");
-	navbarToggler.addEventListener("click", function () {
-		navbarToggler.classList.toggle("active");
+  //======= menu-link-active =======//
+  const links = document.querySelectorAll("#nav .nav-item a");
+
+  function setActiveLink() {
+    links.forEach((link) => link.classList.remove("active"));
+    this.classList.add("active");
+  }
+
+  links.forEach((link) => {
+    link.addEventListener("click", setActiveLink);
   });
 
+  const currentPath = window.location.pathname;
+  links.forEach((link) => {
+    const href = "/" + link.getAttribute("href");
+    if (href === currentPath) {
+      link.classList.add("active");
+    }
+  });
 
+  //===== mobile-menu-btn
+  let navbarToggler = document.querySelector(".navbar-toggler");
+  navbarToggler.addEventListener("click", function () {
+    navbarToggler.classList.toggle("active");
+  });
 
-
-
-  	  /**
+  /**
    * hero-silder
    */
-      new Swiper('.hero-silder', {
-        speed: 6000,
-        loop: true,
-        autoplay: {
-          delay: 1000,
-          disableOnInteraction: false
-        },
-        slidesPerView: 'auto',
-        // navigation: {
-        // 	nextEl: ".btn-next",
-        // 	prevEl: ".btn-prev",
-        // },
-        breakpoints: {
-          320: {
-            slidesPerView: 2,
-            spaceBetween: 6
-          },
-    
-          576: {
-            slidesPerView: 2,
-            spaceBetween: 15
-          },
-    
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 10
-          },
-    
-          992: {
-            slidesPerView: 4,
-            spaceBetween: 15
-          },
-    
-          1200: {
-            slidesPerView: 5,
-            spaceBetween: 20
-          }
-        }
-      });
+  new Swiper(".hero-silder", {
+    speed: 6000,
+    loop: true,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false
+    },
+    slidesPerView: "auto",
+    // navigation: {
+    // 	nextEl: ".btn-next",
+    // 	prevEl: ".btn-prev",
+    // },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 6
+      },
 
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 15
+      },
 
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
 
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 15
+      },
+
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 20
+      }
+    }
+  });
 })();
