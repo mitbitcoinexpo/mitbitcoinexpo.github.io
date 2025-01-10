@@ -426,7 +426,7 @@ li::marker {
 
 .countdown iframe {
   display: block;
-  margin: 0 auto; /* Auto margins will center the block element horizontally */
+  margin: 0 auto; /* Auto margins will center the block element horizontally. */
 }
 
 /*--------------------------------------------------------------
